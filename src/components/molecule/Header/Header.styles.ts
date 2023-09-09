@@ -1,13 +1,14 @@
-.header {
+import styled from 'styled-components'
+
+export const Header = styled.button`
   width: 100%;
   background: var(--black-800);
   height: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
 
-.header p {
+  p {
   margin-left: auto;
   margin-right: auto;
   color: var(--white);
@@ -17,37 +18,13 @@
   font-size: 2.8rem;
 }
 
-.subtitle {
-}
-
-.logoWrapper {
+.logo-wrapper {
   margin: 2rem;
   display: flex;
   align-items: center;
 }
 
-.logoLight {
-  width: 80px;
-  height: 80px;
-  background-color: #ffd700;
-  border-radius: 50%;
-  position: relative;
-  overflow: visible;
-}
-
-.logoLight::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/logiciel_santi.svg");
-  background-size: cover;
-  transform: rotateY(180deg);
-}
-
-.logoDark {
+.logo-dark {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -55,7 +32,7 @@
   overflow: visible;
 }
 
-.logoDark::before {
+.logo-dark::before {
   content: "";
   position: absolute;
   top: 0;
@@ -88,3 +65,5 @@
     transform: rotateY(360deg);
   }
 }
+
+`

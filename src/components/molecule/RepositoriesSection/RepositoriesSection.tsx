@@ -1,4 +1,4 @@
-import { getAllGithubRepos } from "@/app/services/github";
+import { getAllGithubRepos } from "../../../services/github";
 import { useEffect, useState } from "react";
 
 const RepositoriesSection = () => {
