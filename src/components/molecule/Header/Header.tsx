@@ -18,12 +18,9 @@ export default function Header() {
 
   return (
     <S.Header>
-      <div className="logo-wrapper">
-        <div
-          className={`logo-dark ${isSpinning ? "spin" : ""}`}
-          onClick={handleShiftChange}
-        />
-      </div>
+       <div className="logo-wrapper">
+          <S.LogoDark className={isSpinning ? 'spin' : ''} onClick={handleShiftChange} />
+        </div>
     </S.Header>
   );
 }

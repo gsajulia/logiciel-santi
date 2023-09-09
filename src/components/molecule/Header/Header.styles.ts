@@ -1,4 +1,21 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components';
+import Image from "../../../assets/logiciel_santi_dark.svg"
+
+const spin = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+`;
 
 export const Header = styled.button`
   width: 100%;
@@ -9,61 +26,42 @@ export const Header = styled.button`
   justify-content: center;
 
   p {
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--white);
-}
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+  }
 
-.title {
-  font-size: 2.8rem;
-}
+  .title {
+    font-size: 2.8rem;
+  }
 
-.logo-wrapper {
-  margin: 2rem;
-  display: flex;
-  align-items: center;
-}
+  .logo-wrapper {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+  }
+`;
 
-.logo-dark {
+export const LogoDark = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50%;
   position: relative;
   overflow: visible;
-}
 
-.logo-dark::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/logiciel_santi_dark.svg");
-  background-size: cover;
-  transform: rotateY(180deg);
-}
-
-.spin {
-  animation: spin 2s linear;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${Image});
+    background-size: cover;
+    transform: rotateY(180deg);
   }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes spin {
-  from {
-    transform: rotateY(0);
+  &.spin {
+    animation: ${spin} 2s linear;
   }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-`
+`;
