@@ -1,11 +1,12 @@
 import Header from "../../components/molecule/Header/Header";
 import RepositoriesSection from "../../components/molecule/RepositoriesSection/RepositoriesSection";
+import * as S from "./Home.styles";
 
 export default function Home() {
   return (
-    <main>
+    <S.Container>
       <Header />
       <RepositoriesSection />
-    </main>
+    </S.Container>
   );
 }

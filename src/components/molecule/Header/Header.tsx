@@ -18,9 +18,15 @@ export default function Header() {
 
   return (
     <S.Header>
-       <div className="logo-wrapper">
+       <nav className="logo-wrapper">
+        <ul>
+          <li>HOME <S.Point/></li>
+          <li>PROJECTS <S.Point/></li>
           <S.LogoDark className={isSpinning ? 'spin' : ''} onClick={handleShiftChange} />
-        </div>
+          <li><S.Point/>CONTACT</li>
+          <li><S.Point/>TEAM</li>
+          </ul>
+        </nav>
     </S.Header>
   );
 }

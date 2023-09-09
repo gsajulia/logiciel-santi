@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import Image from "../../../assets/logiciel_santi_dark.svg"
+import theme from '../../../assets/theme';
 
 const spin = keyframes`
   0% {
@@ -17,7 +18,7 @@ const spin = keyframes`
   }
 `;
 
-export const Header = styled.button`
+export const Header = styled.header`
   width: 100%;
   background: var(--black-800);
   height: 200px;
@@ -31,8 +32,25 @@ export const Header = styled.button`
     color: var(--white);
   }
 
-  .title {
-    font-size: 2.8rem;
+  li {
+    font-size: 1.25rem;
+    color: ${() => theme.colors.secondaryText};
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
   }
 
   .logo-wrapper {
@@ -64,4 +82,11 @@ export const LogoDark = styled.div`
   &.spin {
     animation: ${spin} 2s linear;
   }
+`;
+
+export const Point = styled.div`
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: ${() => theme.colors.secondaryText};
 `;
