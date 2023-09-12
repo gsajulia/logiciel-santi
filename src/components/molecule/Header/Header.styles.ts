@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import Image from "../../../assets/logiciel_santi_dark.svg"
+import Image from "../../../assets/logiciel_santi_light.svg"
 import theme from '../../../assets/theme';
 import { NavLink } from 'react-router-dom';
 
@@ -47,13 +47,12 @@ export const Header = styled.header`
   }
 
   .logo-wrapper {
-    margin: 2rem;
     display: flex;
     align-items: center;
   }
 `;
 
-export const LogoDark = styled.div`
+export const Logo = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50%;

@@ -32,7 +32,7 @@ export default function Header() {
               PROJECTS <div className="point"/>
             </S.StyledLink>
           </li>
-          <S.LogoDark
+          <S.Logo
             className={isSpinning ? "spin" : ""}
             onClick={handleShiftChange}
           />

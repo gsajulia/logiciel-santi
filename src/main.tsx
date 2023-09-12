@@ -5,7 +5,6 @@ import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
 import Team from './pages/Team/Team';
 
-import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
