@@ -17,6 +17,7 @@ const Button = ({ text = "", img = "" }) => (
 export default function Contact() {
   return (
     <S.Container>
+      <h6>Linktree</h6>
       <Button img={linkedin} text="Linkedin"/>
       <Button img={email} text="Email"/>
       <Button img={whats} text="WhatsApp"/>

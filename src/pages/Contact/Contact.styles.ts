@@ -4,6 +4,8 @@ export const Container = styled.div`
   h6 {
     color: ${theme.colors.text};
     font-size: 1.875rem;
+    margin: 0.5rem;
+    font-weight: 400;
   }
   display: flex;
   align-items: center;
