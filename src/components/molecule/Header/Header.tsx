@@ -20,11 +20,11 @@ export default function Header() {
     <S.Header>
        <nav className="logo-wrapper">
         <ul>
-          <li>HOME <S.Point/></li>
-          <li>PROJECTS <S.Point/></li>
+          <S.Li>HOME <S.Point/></S.Li>
+          <S.Li>PROJECTS <S.Point/></S.Li>
           <S.LogoDark className={isSpinning ? 'spin' : ''} onClick={handleShiftChange} />
-          <li><S.Point/>CONTACT</li>
-          <li><S.Point/>TEAM</li>
+          <S.Li><S.Point/>CONTACT</S.Li>
+          <S.Li><S.Point/>TEAM</S.Li>
           </ul>
         </nav>
     </S.Header>

@@ -32,15 +32,6 @@ export const Header = styled.header`
     color: var(--white);
   }
 
-  li {
-    font-size: 1.25rem;
-    color: ${() => theme.colors.secondaryText};
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
   ul {
     display: flex;
     align-items: center;
@@ -88,5 +79,14 @@ export const Point = styled.div`
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: ${() => theme.colors.secondaryText};
+  background-color: ${theme.colors.secondaryText};
+`;
+
+export const Li = styled.div`
+  font-size: 1.25rem;
+  color: ${theme.colors.secondaryText};
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 `;
