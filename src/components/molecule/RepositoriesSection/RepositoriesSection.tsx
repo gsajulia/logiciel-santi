@@ -1,13 +1,15 @@
 import { getAllGithubRepos } from "../../../services/github";
 import { useEffect, useState } from "react";
 
+type TRepo = { id: number; homepage: string; description: string };
+
 const RepositoriesSection = () => {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<TRepo[]>([]);
 
   const getBoracodarRepos = async () => {
     const response = await getAllGithubRepos();
     const repos = response.data.filter(
-      (repo) =>
+      (repo: TRepo) =>
         repo.description && repo.description.toLowerCase().includes("boracodar")
     );
     console.log(repos);
