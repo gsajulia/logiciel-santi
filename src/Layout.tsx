@@ -6,12 +6,8 @@ import openTag from "./assets/open-tag.svg"
 import closeTag from "./assets/close-tag.svg"
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${() => theme.colors.background};
-`;
-
-export const Content = styled.div`
-  margin-left: 15rem;
 `;
 
 export const OpenTag = styled.img`
@@ -41,7 +37,7 @@ export default function Layout({ children } : { children: JSX.Element }) {
       <GlobalStyle/>
       <Header/>
       <OpenTag src={openTag} />
-      <Content>{children}</Content>
+      {children}
       <CloseTag src={closeTag} />
       <MadeBy>Made by Logiciel Santi</MadeBy>
     </Container>

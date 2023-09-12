@@ -5,6 +5,7 @@ export const Container = styled.div`
   color: ${theme.colors.text};
   display: flex;
   justify-content: space-between;
+  margin-left: 15rem;
 
   h1 {
     font-family: 'Audiowide', cursive;
@@ -35,6 +36,7 @@ export const RightSection = styled.div`
     height: 20rem;
     cursor: pointer;
     margin-right: 4rem;
+    border-radius: 10px;
   }
 
   a {
