@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import Image from "../../../assets/logiciel_santi_dark.svg"
 import theme from '../../../assets/theme';
+import { NavLink } from 'react-router-dom';
 
 const spin = keyframes`
   0% {
@@ -82,7 +83,7 @@ export const Point = styled.div`
   background-color: ${theme.colors.secondaryText};
 `;
 
-export const Li = styled.div`
+export const StyledLink = styled(NavLink)`
   font-size: 1.25rem;
   color: ${theme.colors.secondaryText};
   list-style-type: none;

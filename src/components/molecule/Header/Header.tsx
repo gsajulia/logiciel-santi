@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import * as S from "./Header.styles";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isSpinning, setIsSpinning] = useState(true);
@@ -20,11 +21,11 @@ export default function Header() {
     <S.Header>
        <nav className="logo-wrapper">
         <ul>
-          <S.Li>HOME <S.Point/></S.Li>
-          <S.Li>PROJECTS <S.Point/></S.Li>
+          <li><S.StyledLink to="/">HOME </S.StyledLink><S.Point/></li>
+          <li> <S.StyledLink to="/projects">PROJECTS </S.StyledLink><S.Point/></li>
           <S.LogoDark className={isSpinning ? 'spin' : ''} onClick={handleShiftChange} />
-          <S.Li><S.Point/>CONTACT</S.Li>
-          <S.Li><S.Point/>TEAM</S.Li>
+          <li><S.StyledLink to="/contact"><S.Point/>CONTACT</S.StyledLink></li>
+          <li><S.StyledLink to="/team"><S.Point/>TEAM</S.StyledLink></li>
           </ul>
         </nav>
     </S.Header>
