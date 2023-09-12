@@ -10,24 +10,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './routes/Root';
+import Layout from './Layout';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Layout><Home/></Layout>,
   },
   {
     path: "/projects",
-    element: <Projects />,
+    element: <Layout><Projects /></Layout>,
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <Layout><Contact /></Layout>,
   },
   {
     path: "/team",
-    element: <Team />,
+    element: <Layout><Team /></Layout>,
   },
 ]);
 4

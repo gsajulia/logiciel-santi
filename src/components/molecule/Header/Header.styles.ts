@@ -21,6 +21,7 @@ const spin = keyframes`
 
 export const Header = styled.header`
   width: 100%;
+  background-color: ${() => theme.colors.background} !important;
   background: var(--black-800);
   height: 200px;
   display: flex;
@@ -76,13 +77,6 @@ export const LogoDark = styled.div`
   }
 `;
 
-export const Point = styled.div`
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: ${theme.colors.secondaryText};
-`;
-
 export const StyledLink = styled(NavLink)`
   font-size: 1.25rem;
   color: ${theme.colors.secondaryText};
@@ -90,4 +84,19 @@ export const StyledLink = styled(NavLink)`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  text-decoration: none;
+
+  .point {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: ${theme.colors.secondaryText};
+  }
+
+  &.active {
+    color: ${theme.colors.primary};
+    .point {
+      background-color: ${theme.colors.primary};
+    }
+  }
 `;
