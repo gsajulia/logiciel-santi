@@ -12,6 +12,10 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Button = styled.button`
@@ -26,6 +30,7 @@ export const Button = styled.button`
   min-width: 300px;
   border: none;
   border-radius: 0.75rem;
+  cursor: pointer;
 
   img {
     margin-left: 2rem;
